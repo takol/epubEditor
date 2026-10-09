@@ -165,7 +165,7 @@
             <button type="button" class="btn-footer-link" id="homeTermsBtn" title="查閱使用者條款" data-i18n="legal_terms_of_service">使用者條款</button>
           </div>
           <span class="footer-sep">·</span>
-          <span class="home-footer-version" id="homeFooterVersion">版本 v0.8 Build 143 作者 Takol</span>
+          <span class="home-footer-version" id="homeFooterVersion">版本 v0.8 Build 145 作者 Takol</span>
         </div>
       </section>
 
@@ -282,7 +282,7 @@
                 <span class="footer-sep">·</span>
                 <button type="button" class="btn-footer-link" id="sidebarTermsBtn" title="查閱使用者條款" data-i18n="legal_terms_of_service">使用者條款</button>
               </div>
-              <span class="sidebar-footer-text" id="sidebarFooterText" data-version="v0.8 Build 143" data-author="Takol">版本 v0.8 Build 143 作者 Takol</span>
+              <span class="sidebar-footer-text" id="sidebarFooterText" data-version="v0.8 Build 145" data-author="Takol">版本 v0.8 Build 145 作者 Takol</span>
             </div>
 
             <!-- Vertical Rail Controls (Shown when sidebar is collapsed) -->
@@ -300,7 +300,7 @@
                 </button>
               </div>
               <div class="sidebar-rail-footer" id="sidebarRailFooter">
-                <span class="sidebar-rail-version-text" id="sidebarRailVersionText">版本 v0.8 Build 143 作者 Takol</span>
+                <span class="sidebar-rail-version-text" id="sidebarRailVersionText">版本 v0.8 Build 145 作者 Takol</span>
               </div>
             </div>
 
@@ -1226,6 +1226,7 @@
               <a href="#manual-sec-backup" class="manual-nav-item"><i class="fa-solid fa-floppy-disk"></i> <span>專案草稿與備份</span></a>
               <a href="#manual-sec-gdrive" class="manual-nav-item"><i class="fa-brands fa-google-drive"></i> <span>Google Drive 同步</span></a>
               <a href="#manual-sec-export" class="manual-nav-item"><i class="fa-solid fa-file-zipper"></i> <span>標準 EPUB 匯出</span></a>
+              <a href="#manual-sec-legal" class="manual-nav-item"><i class="fa-solid fa-scale-balanced"></i> <span>隱私與條款規範</span></a>
               <a href="#manual-sec-faq" class="manual-nav-item"><i class="fa-solid fa-circle-question"></i> <span>常見問題 (FAQ)</span></a>
               <a href="#manual-sec-shortcuts" class="manual-nav-item"><i class="fa-solid fa-keyboard"></i> <span>常用快捷鍵速查</span></a>
             </nav>
@@ -1389,7 +1390,26 @@
               </ul>
             </section>
 
-            <!-- Section 12: FAQ -->
+            <!-- Section 12: Legal Policies & Bilingual Support -->
+            <section class="manual-section" id="manual-sec-legal">
+              <h2>⚖️ 隱私權政策、使用者條款與雙語支援 (v0.8)</h2>
+              <div class="manual-callout manual-callout-info">
+                <strong><i class="fa-solid fa-shield-halved"></i> 創作者 100% 著作權保留與隱私安全保障</strong>
+                <p>EPUB 3 Maker 堅持純前端本機運作，使用者透過本應用程式撰寫、匯入與轉製之所有文稿、圖片與書籍結構，本服務主張零版權與零所有權，所有智慧財產權均屬創作者 100% 完整擁有。</p>
+              </div>
+              <h3>1. 雲地環境條款閱讀體驗</h3>
+              <ul>
+                <li><strong>地端離線環境 (<code>file://</code>)</strong>：點擊頁尾或設定視窗的「隱私權政策」與「使用者條款」時，以內建的 Popup Modal 彈窗呈現，免連網即可離線查閱，彈窗內亦提供開啟線上網址選項。</li>
+                <li><strong>雲端線上環境 (GitHub Pages)</strong>：點擊條款連結時，直接在瀏覽器新分頁開啟專屬靜態網頁（<code>privacy.html</code> 與 <code>terms.html</code>）。</li>
+              </ul>
+              <h3>2. 完整雙語切換與零外部依賴 Base64 內嵌架構</h3>
+              <ul>
+                <li><strong>繁中／英文即時切換</strong>：地端彈窗內容依應用程式當前語系自動以繁中或英文呈現；獨立條款網頁右上角提供語言切換按鈕，切換設定記憶於 <code>localStorage</code>。</li>
+                <li><strong>Base64 內嵌零外部依賴</strong>：條款頁面之 Logo 與 Favicon 全數採用 Base64 Data URI 嵌入，地端雙擊開檔絕不引發任何 <code>net::ERR_FILE_NOT_FOUND</code> 遺失錯誤。</li>
+              </ul>
+            </section>
+
+            <!-- Section 13: FAQ -->
             <section class="manual-section" id="manual-sec-faq">
               <h2>❓ 常見問題 (FAQ)</h2>
               <div class="manual-faq-item">
@@ -1404,9 +1424,17 @@
                 <h4>Q3：直排書籍中遇到英文或數字會倒立嗎？</h4>
                 <p>系統樣式表採用國際標準 <code>text-orientation: mixed</code>。中文字元維持直立，英文字母與多位數依出版常規旋轉 90 度；兩位數以內數字建議寫作全形漢字以達最佳視覺美感。</p>
               </div>
+              <div class="manual-faq-item">
+                <h4>Q4：自製封面圖檔時，有什麼最佳尺寸與格式建議？</h4>
+                <p>推薦使用 <code>.png</code> 或 <code>.jpg</code> 格式，尺寸建議為寬 1200 像素 × 高 1800 像素（2:3 黃金比例），72～150 DPI，色彩空間請設定為標準 sRGB 模式。</p>
+              </div>
+              <div class="manual-faq-item">
+                <h4>Q5：如何查看應用程式的隱私權政策與服務條款？支援英文嗎？</h4>
+                <p>您可以在首頁頁尾、側邊欄頁尾或「偏好設定」視窗的「法律與條款」區塊開啟「隱私權政策」與「使用者條款」。本服務完整支援繁中與英文雙語版本，若您切換語系為英文，地端彈窗將自動顯示英文內容；獨立條款網頁右上角亦提供切換按鈕，方便隨時切換閱讀。</p>
+              </div>
             </section>
 
-            <!-- Section 13: Shortcuts -->
+            <!-- Section 14: Shortcuts -->
             <section class="manual-section" id="manual-sec-shortcuts">
               <h2>⌨️ 常用快捷鍵速查清單</h2>
               <div class="manual-table-wrapper">
